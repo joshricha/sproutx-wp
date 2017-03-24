@@ -128,6 +128,16 @@ function sproutx_top_50_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer area 4 - full width top section', 'sproutx-top-50' ),
+		'id'            => 'footer-4',
+		'description'   => esc_html__( 'Add footer full width top section widget area', 'sproutx-top-50' ),
+		'before_widget' => '<div class="col-md-6 col-md-offset-3">',
+		'after_widget'  => '</div><!-- col md 6 offset 3 -->',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'sproutx_top_50_widgets_init' );
 

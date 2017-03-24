@@ -11,6 +11,14 @@
 
 ?>
 
+<section class="subscribe grey-bg section-padd">
+	<div class="container">
+
+		<?php dynamic_sidebar( 'footer-4' ); ?>
+
+	</div><!-- container -->
+</section><!-- subscribe -->
+
 <footer id="contact">
     <div class="green-bg">
       <div class="container">
@@ -19,7 +27,7 @@
             <?php dynamic_sidebar( 'footer-1' ); ?>
 						<?php dynamic_sidebar( 'footer-2' ); ?>
 						<?php dynamic_sidebar( 'footer-3' ); ?>
-						
+
         </div><!-- col 12 -->
       </div><!-- container -->
     </div><!-- green bg -->
