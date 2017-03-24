@@ -4,12 +4,16 @@
 
   get_header();
 
+  $hero_body      = get_field('hero_body');
+
+  global $post;
+  $content = $post->post_content;
+
 ?>
 
 <div class="pusher">
-  <section class="hero-image">
+  <section style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);" class="hero-image">
     <header class="container">
-
       <?php dynamic_sidebar( 'header-logo' ); ?>
 
       <?php
@@ -20,15 +24,14 @@
 
         ) );
       ?>
-
     </header>
-
     <div class="container">
       <div class="hero-text text-center">
         <div class="border-box-white">
-          <h1>TOP50</h1>
+          <h1><?php the_title(); ?></h1>
         </div><!-- border box white -->
-        <p>We identify, fund and accelerate AgTech's leading startups.</p>
+        <?php echo $content; ?>
+        <?php echo $hero_body; ?>
       </div><!-- hero text -->
     </div><!-- container -->
     <div class="powered-by">

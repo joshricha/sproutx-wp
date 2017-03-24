@@ -334,7 +334,6 @@ a.apply {
 /* Hero img */
 
 .hero-image {
-			background-image: url(../images/hero.jpg);
 			background-repeat:  no-repeat;
 			background-size:  cover;
 			background-color: #999;
