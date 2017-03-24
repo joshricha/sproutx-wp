@@ -44,7 +44,7 @@ function sproutx_top_50_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'sproutx-top-50' ),
+		'header-menu' => esc_html__( 'Primary', 'sproutx-top-50' )
 	) );
 
 	/*
@@ -135,6 +135,16 @@ function sproutx_top_50_widgets_init() {
 		'description'   => esc_html__( 'Add footer full width top section widget area', 'sproutx-top-50' ),
 		'before_widget' => '<div class="col-md-6 col-md-offset-3">',
 		'after_widget'  => '</div><!-- col md 6 offset 3 -->',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Logo widget area', 'sproutx-top-50' ),
+		'id'            => 'header-logo',
+		'description'   => esc_html__( 'Add logo here', 'sproutx-top-50' ),
+		'before_widget' => '<div class="logo col-md-4 col-sm-12 text-left">',
+		'after_widget'  => '</div><!-- logo -->',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
