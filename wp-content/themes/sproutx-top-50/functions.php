@@ -98,6 +98,36 @@ function sproutx_top_50_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer area 1', 'sproutx-top-50' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add footer first third widget area', 'sproutx-top-50' ),
+		'before_widget' => '<div class="phone col-sm-4">',
+		'after_widget'  => '</div><!-- phone -->',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer area 2', 'sproutx-top-50' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add footer second third widget area with address here', 'sproutx-top-50' ),
+		'before_widget' => '<address class="col-sm-4">',
+		'after_widget'  => '</address>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer area 3', 'sproutx-top-50' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add footer third and final  one-third widget area here', 'sproutx-top-50' ),
+		'before_widget' => '<div class="email col-sm-4">',
+		'after_widget'  => '</div><!-- email -->',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'sproutx_top_50_widgets_init' );
 
